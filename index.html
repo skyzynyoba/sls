@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>STRIDE LEGACY SUBANG | Komunitas lari</title> 
+    <meta name="description" content="Stride Legacy Subang merupakan komunitas yang berdedikasi untuk menciptakan jejak dan warisan bagi masa depan melalui setiap langkah. Kami mendorong semangat kebersamaan, hidup sehat, dan pencapaian pribadi pada setiap anggota ataupun masyarakat kabupaten Subang. Bergabung dengan kami untuk meraih kebugaran, kebersamaan, dan pengalaman yang tak terlupakan.">
+    <meta name="google-site-verification" content="tI4DP_Jtel1_eUXf6XqTXTZRd3tvdKLzD9ate-WGSiY" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    
+    <style>
+
+/* Import Google Fonts - Montserrat and Lato */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap');
+
+/* 1. Reset Dasar & Tipografi */
+body {
+    font-family: 'Lato', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f0f0f0; 
+    background-color: #1a1a1a; 
+    line-height: 1.7; 
+    font-size: 1.05em;
+    scroll-behavior: smooth;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #ffc107;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
+p { margin-bottom: 1em; }
+.content-section { padding: 80px 5%; text-align: center; }
+.dark-bg { background-color: #121212; }
+
+/* 2. Header dan Navigasi */
+header {
+    background: #0d0d0d;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.logo img { height: 50px; vertical-align: middle; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+    letter-spacing: 1px;
+}
+nav ul li a:hover, .cta-nav:hover {
+    color: #ffc107;
+    background-color: #222;
+    border-radius: 5px;
+}
+.cta-nav {
+    background-color: #ffc107;
+    color: #1a1a1a !important;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.menu-toggle { display: none; background: transparent; border: none; color: #ffc107; font-size: 2em; cursor: pointer; z-index: 1001; }
+
+
+/* 3. Hero Section (Beranda) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517611013511-76a0a04921b0?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 180px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content { max-width: 900px; }
+.hero h1 { font-size: 4.0em; margin-bottom: 10px; color: white; text-shadow: 3px 3px 8px rgba(0,0,0,0.8); line-height: 1.1; }
+.hero p { font-family: 'Lato', sans-serif; font-style: italic; font-size: 1.4em; margin-bottom: 40px; color: #ddd; text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
+.cta-button {
+    background-color: #ffc107;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 12px 30px; 
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.cta-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+}
+.secondary-cta {
+    background-color: #007bff;
+    color: white;
+}
+.secondary-cta:hover {
+    background-color: #0056b3;
+}
+
+
+/* 4. Section Info Terbaru */
+.info-banner {
+    padding: 50px 5%;
+    background-color: #0d0d0d;
+    border-bottom: 5px solid #ffc107;
+}
+.info-keterangan {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ccc !important;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
+.info-link {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.2);
+    transition: transform 0.3s;
+}
+.info-link:hover {
+    transform: translateY(-5px);
+}
+.info-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 5. Section Aktivitas */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.activity-card {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+.activity-card:hover { transform: translateY(-5px); }
+.activity-card h3 { color: #ffc107; margin-bottom: 15px; font-size: 1.5em; }
+.activity-card p { color: #ccc; font-size: 0.95em; }
+
+
+/* 6. Galeri */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+.gallery-item {
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background-color: #333;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+
+/* 7. Footer */
+footer {
+    background: #0d0d0d;
+    color: #aaa;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+}
+.social-icons { margin-top: 20px; }
+.social-icons a {
+    color: #ffc107;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+.social-icons a i { margin-right: 8px; }
+.social-icons a:hover { color: white; }
+
+
+/* 8. Responsif untuk Mobile */
+@media (max-width: 768px) {
+    body { font-size: 1em; }
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.4em; }
+    .content-section { padding: 50px 4%; }
+    .menu-toggle { display: block; }
+    nav { display: none; position: absolute; top: 80px; left: 0; width: 100%; background-color: #0d0d0d; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+    nav.active { display: block; }
+    nav ul { flex-direction: column; padding: 10px 0; }
+    nav ul li a { padding: 15px 20px; border-bottom: 1px solid #222; }
+    .cta-nav { margin-left: 0; margin-top: 10px; }
+    .info-link { border-radius: 0; }
+    .info-keterangan { font-size: 0.9em; }
+    .activity-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .social-icons a { font-size: 1.1em; margin: 0 8px; }
+}
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo-stride-legacy.png" alt="Stride Legacy Subang Logo">
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#beranda">BERANDA</a></li>
+                <li><a href="#info-terbaru">INFO TERBARU</a></li> 
+                <li><a href="#tentang">TENTANG KAMI</a></li>
+                <li><a href="sejarah.html">VISI & MISI</a></li> 
+                <li><a href="#aktivitas">AKTIVITAS</a></li>
+                <li><a href="gabung.html" class="cta-nav">GABUNG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-duration="1200">STRIDE LEGACY SUBANG</h1>
+            <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">"Setiap Langkah Adalah Warisan"</p>
+            <a href="#aktivitas" class="cta-button" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200">LIHAT JADWAL KAMI</a>
+        </div>
+    </section>
+    
+    <section id="info-terbaru" class="content-section info-banner" data-aos="fade-in">
+        <h2 data-aos="fade-up">INFORMATION</h2>
+        
+        <a href="https://www.instagram.com/p/DQA4qVOknuJ/?igsh=MWFtZDR5NWsxdHlzNA==" target="_blank" class="info-link" data-aos="zoom-in" data-aos-delay="200">
+            <img src="img/terbaru.jpg" alt="JERSEY STRIDE LEGACY SUBANG DENGAN TEMA "INDONESIAN CULTURE".">
+        </a>
+        
+        <p class="info-keterangan" data-aos="fade-up" data-aos-delay="400">
+            JERSEY STRIDE LEGACY SUBANG DENGAN TEMA "INDONESIAN CULTURE".
+        </p>
+    </section>
+    
+    <section id="tentang" class="content-section">
+        <h2 data-aos="fade-up">TENTANG KAMI</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Stride Legacy Subang merupakan komunitas yang berdedikasi untuk menciptakan jejak dan warisan bagi masa depan melalui setiap langkah. Kami mendorong semangat kebersamaan, hidup sehat, dan pencapaian pribadi pada setiap anggota ataupun masyarakat kabupaten Subang.</p>
+        <p data-aos="fade-up" data-aos-delay="200">Bergabung dengan kami untuk meraih kebugaran, kebersamaan, dan pengalaman yang tak terlupakan.</p>
+    </section>
+
+    <section id="aktivitas" class="content-section dark-bg">
+        <h2 data-aos="fade-up">AKTIVITAS KAMI</h2>
+        <div class="activity-grid">
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>PROGRAM BERSAMA MINGGUAN</h3>
+                <p>📍 GOR LAPANG PELANGI - SUBANG</p>
+                <p>Hari Senin, Rabu, Jumat. Pukul 15.30 WIB</p>
+                <p>Program menyesuaikan</p>
+            </div>
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
+                <h3>PROGRAM LAINNYA</h3>
+                <p>📍 Menyesuaikan</p>
+                <p>Hari Minggu</p>
+                <p>Swimming, Belajar akademik bersama, dll</p>
+            </div>
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="500">
+                <h3>EVENT OLAHRAGA</h3>
+                <p>📍 Berbagai Lokasi</p>
+                <p>Mengikuti berbagai macam event olahraga. Contoh: Race Running, Fun Running, dll yang mengatasnamakan komunitas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="content-section">
+    <h2 data-aos="fade-up">MOMEN KAMI</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+            <img src="img/foto1.jpg" alt="STRIDE LEGACY SUBANG PADA EVENT ERAFONE RUN 2025">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+            <img src="img/foto2.jpg" alt="PROGRAM BERSAMA">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+            <img src="img/foto3.jpg" alt="Foto Kegiatan Stride Legacy 3">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+            <img src="img/foto4.jpg" alt="Foto Kegiatan Stride Legacy 4">
+        </div>
+    </div>
+</section>
+
+    <section id="gabung" class="content-section dark-bg">
+        <h2 data-aos="fade-up">JADI BAGIAN DARI STRIDE LEGACY SUBANG</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Siap untuk melangkah dan meninggalkan jejak atau warisan bagi masa depan? Isi formulir pendaftaran resmi kami dan mari bergabung!</p>
+        <a href="gabung.html" class="cta-button secondary-cta" data-aos="zoom-in" data-aos-delay="300">ISI FORMULIR PENDAFTARAN</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Stride Legacy Subang. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/stridelegacysubang" target="_blank" aria-label="Instagram">
+                <i class="fab fab fa-instagram"></i> StrideLegacySubang
+            </a>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            const navLinks = mainNav.querySelectorAll('a');
+
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (mainNav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times'); 
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Hanya tutup menu jika bukan link ke halaman eksternal (.html)
+                    const isExternalLink = link.getAttribute('href').includes('.html');
+                    if (!isExternalLink && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,     
+        });
+    </script>
+
+</body>
+</html>
